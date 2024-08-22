@@ -1,5 +1,5 @@
 /* Array Methods */
-
+/*
 const fruitBowl = ["Orange", "Banana", "Apple", "Kiwi"];
 console.log (fruitBowl);
 console.log (fruitBowl.toString());
@@ -20,4 +20,4 @@ console.log(fruitBowl);
 // .shift fjerner det første elementet i en array
 fruitBowl.shift();
 console.log(fruitBowl);
-
+*/
