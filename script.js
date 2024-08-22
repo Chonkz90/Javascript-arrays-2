@@ -41,14 +41,48 @@ function createFruitBowl(action) {
 
 */
 
+
 const fruitPush = document.querySelector("#fruitPush");
 const fruitPop = document.querySelector("#fruitPop");
 const fruitUnshift = document.querySelector("#fruitUnshift")
 const fruitShift = document.querySelector("#fruitShift")
 
-fruitPush.addEventListener("click", createFruitBowl);
-fruitPop.addEventListener("click", createFruitBowl);
-fruitUnshift.addEventListener("click",createFruitBowl);
-fruitShift.addEventListener("click", createFruitBowl);
+const fruitBowl = [];
+
+fruitPush.addEventListener("click", function(){
+    let inputFruit = document.querySelector("#inputFruit");
+    fruitBowl.push(inputFruit.value);
+
+    let fruitDisplay = document.querySelector("#fruitDisplay");
+    fruitDisplay.textContent = fruitBowl;
+
+    inputFruit.value ="";
+});
+fruitPop.addEventListener("click", function () {
+    let inputFruit = document.querySelector("#inputFruit").value;
+    fruitBowl.pop(inputFruit.value)
+    
+    let fruitDisplay = document.querySelector("#fruitDisplay");
+    fruitDisplay.textContent = fruitBowl;
+
+inputFruit.value="";
+});
+fruitUnshift.addEventListener("click", function () {
+    let inputFruit = document.querySelector("#inputFruit");
+    fruitBowl.unshift(inputFruit.value)
+
+    let fruitDisplay = document.querySelector("#fruitDisplay");
+    fruitDisplay.textContent = fruitBowl;
+
+    inputFruit.value="";
+});
+fruitShift.addEventListener("click", function () {
+    let inputFruit = document.querySelector("#inputFruit");
+    fruitBowl.shift()inputFruit.value
+
+    let fruitDisplay = document.querySelector("#fruitDisplay");
+    fruitDisplay.textContent = fruitBowl;
+    inputFruit.value="";
+});
 
 console.log (fruitBowl);
