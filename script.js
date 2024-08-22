@@ -21,3 +21,34 @@ console.log(fruitBowl);
 fruitBowl.shift();
 console.log(fruitBowl);
 */
+
+
+
+/*
+
+function createFruitBowl(action) {
+    const inputFruit = document.querySelector("#inputFruit").value;
+    console.log(inputFruit);
+
+    const fruitBowl = [];
+
+    if (action === "fruitPush") {
+        fruitBowl.push()
+    } else {
+        console.log("Something went wrong!")
+    }
+}
+
+*/
+
+const fruitPush = document.querySelector("#fruitPush");
+const fruitPop = document.querySelector("#fruitPop");
+const fruitUnshift = document.querySelector("#fruitUnshift")
+const fruitShift = document.querySelector("#fruitShift")
+
+fruitPush.addEventListener("click", createFruitBowl);
+fruitPop.addEventListener("click", createFruitBowl);
+fruitUnshift.addEventListener("click",createFruitBowl);
+fruitShift.addEventListener("click", createFruitBowl);
+
+console.log (fruitBowl);
